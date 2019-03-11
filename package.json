@@ -4,7 +4,11 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "test": "yarn tslint && yarn tsc-test && yarn jest",
+    "tslint": "tslint --project .",
+    "tsc-test": "tsc --project . --noEmit",
+    "jest": "jest"
   },
   "dependencies": {
     "@types/expo": "32.0.6",
@@ -15,7 +19,47 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz"
   },
   "devDependencies": {
-    "babel-preset-expo": "^5.0.0"
+    "@types/enzyme": "3.9.0",
+    "@types/jest": "24.0.11",
+    "@types/react-dom": "16.8.2",
+    "@types/react-test-renderer": "16.8.1",
+    "babel-preset-expo": "^5.0.0",
+    "enzyme": "3.9.0",
+    "enzyme-adapter-react-16": "1.10.0",
+    "jest": "24.4.0",
+    "jest-expo": "32.0.0",
+    "react-dom": "16.8.4",
+    "react-test-renderer": "16.8.4",
+    "ts-jest": "24.0.0",
+    "tslint": "5.13.1",
+    "tslint-config-airbnb": "5.11.1",
+    "typescript": "3.3.3333"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "setupFiles": [
+      "./testsetup.js"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testMatch": [
+      "**/__tests__/**/*.ts?(x)",
+      "**/?(*.)+(spec|test).ts?(x)"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "tsx"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfig": {
+          "jsx": "react"
+        }
+      }
+    }
   },
   "private": true
 }
