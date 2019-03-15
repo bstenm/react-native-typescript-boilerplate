@@ -1,18 +1,21 @@
 {
-      "extends": [
-            "tslint:recommended",
-            "tslint-config-airbnb",
-            "tslint-config-prettier",
-            "tslint-react"
-          ],
-          "rules": {
-            "prettier": true,
-            "import-name": false,
-            "member-access": [true, "no-public"],
-            "ter-indent": [
-                  true,
-                  6,
-                  { "SwitchCase": 1 }
-            ]
+  "extends": [
+    "tslint:recommended",
+    "tslint-config-airbnb",
+    "tslint-config-prettier",
+    "tslint-react"
+  ],
+  "rulesDirectory": "tslint-plugin-prettier",
+  "rules": {
+    "prettier": true,
+    "import-name": false,
+    "member-access": [true, "no-public"],
+    "ter-indent": [
+      true,
+      6,
+      {
+        "SwitchCase": 1
       }
+    ]
+  }
 }

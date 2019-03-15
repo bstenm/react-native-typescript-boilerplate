@@ -3,12 +3,9 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default class App extends React.Component<{}, {}> {
       render() {
-            const m = {
-                  truc: 'bidule'
-            };
             return (
                   <View style={styles.container}>
-                        <Text d={m}>Welcome!</Text>
+                        <Text>Welcome!</Text>
                   </View>
             );
       }
