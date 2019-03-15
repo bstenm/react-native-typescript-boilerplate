@@ -5,8 +5,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject",
-    "test": "yarn tslint && yarn tsc-test && yarn jest",
-    "tslint": "tslint --project .",
+    "test": "yarn lint && yarn tsc-test && yarn jest",
+    "lint": "tslint --project .",
     "tsc-test": "tsc --project . --noEmit",
     "jest": "jest"
   },
@@ -28,11 +28,15 @@
     "enzyme-adapter-react-16": "1.10.0",
     "jest": "24.4.0",
     "jest-expo": "32.0.0",
+    "prettier": "1.16.4",
     "react-dom": "16.8.4",
     "react-test-renderer": "16.8.4",
     "ts-jest": "24.0.0",
     "tslint": "5.13.1",
     "tslint-config-airbnb": "5.11.1",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-plugin-prettier": "2.0.1",
+    "tslint-react": "3.6.0",
     "typescript": "3.3.3333"
   },
   "jest": {
@@ -60,6 +64,15 @@
         }
       }
     }
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "tabWidth": 2,
+    "semi": true
   },
   "private": true
 }
